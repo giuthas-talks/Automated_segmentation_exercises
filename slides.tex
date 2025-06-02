@@ -72,9 +72,10 @@
   \item This slide
   \item Introduction: The what and the why
   \item Method: The how
-  \item Demo
+  \item Demo - ish
+  \item Discussion
   \item Want to have a go yourself?
-  \item MaTiPSS ad
+  \item MaTiPS ad
   \item Thanks and references
   \end{itemize}
 }
@@ -93,12 +94,54 @@
 }
 
 
-\frame{\frametitle{Method: The how -- Setting up}
+\frame{\frametitle{Method: The big caveats}
+  \begin{itemize}
+    \item Does not work yet.
+    \item Everything might change.
+    \item I want your input for making this good.
+  \end{itemize}
+}
+
+
+\frame{\frametitle{Method: Installing PATKIT}
+\begin{itemize}
+  \item Install uv \url{https://docs.astral.sh/uv/}
+  % \begin{itemize}
+  %   \item Mac/Linux: 
+  %   \begin{verbatim}
+  %     curl -LsSf https://astral.sh/uv/install.sh | sh
+  %   \end{verbatim} 
+  %   \item Windows:
+  %   \begin{verbatim}
+  %     powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+  %   \end{verbatim}
+  % \end{itemize} 
+  \item On the commandline run:\\
+    uv tool install patkit\\
+    patkit
+  \item This should print the commandline help.
+\end{itemize}
+}
+
+
+\frame{\frametitle{Method: Running an example assignment/exercise}
+\begin{itemize}
+  \item Get the example data from\\ 
+  \url{https://github.com/giuthas-talks/Automated_segmentation_exercises/}
+  \item Put it in a couple of folders of your own choosing. 
+  \item Run:\\
+    patkit exercise [folder name]
+  \item This should open the annotator GUI.
+\end{itemize}
+}
+
+
+\frame{\frametitle{Method: Setting up}
 
 \begin{itemize}
   \item Open a directory with matching TextGrids and audio files in PATKIT as
   an exercise:\\
-  ~~Exercises $\rightarrow$ Import directory\ldots
+  ~~Exercises $\rightarrow$ Create assignment\ldots
   \item If setting up for others, go to:\\
   ~~Exercises $\rightarrow$ Save as exercise \ldots\\
   to save the audio files and the scrambled TextGrids in a new location. 
@@ -106,7 +149,7 @@
 }
 
 
-\frame{\frametitle{Method: The how -- Running an exercise}
+\frame{\frametitle{Method: Running an exercise}
 \begin{itemize}
   \item Either do the setup steps or get an exercise dataset from someone.
   \item If you want to compare your segmentation with the model, you'll
@@ -156,51 +199,19 @@
 }
 
 
-\frame{\frametitle{Installation instructions}
-\begin{itemize}
-  \item Install uv \url{https://docs.astral.sh/uv/}
-  % \begin{itemize}
-  %   \item Mac/Linux: 
-  %   \begin{verbatim}
-  %     curl -LsSf https://astral.sh/uv/install.sh | sh
-  %   \end{verbatim} 
-  %   \item Windows:
-  %   \begin{verbatim}
-  %     powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
-  %   \end{verbatim}
-  % \end{itemize} 
-  \item On the commandline run:\\
-    uv tool install patkit\\
-    patkit
-  \item This should print the commandline help.
-\end{itemize}
-}
-
-
-\frame{\frametitle{Running the example assignment/exercise}
-\begin{itemize}
-  \item Get the example data from recorded\_data/assignment\_example and
-  exercises/minimal and put it in a folder of your own choosing. 
-  \item Run:\\
-    patkit exercise [folder\_name]
-  \item This should open the annotator GUI.
-\end{itemize}
-}
-
-
 \frame{
   \centering
   {
     \bf \Large 
     \usebeamercolor[fg]{title}
-    MaTiPSS ad
+    MaTiPS ad
     
     \vfill
   }
 }
 
 
-\frame{\frametitle{Methods and Techniques in Phonetics of Signing and Speech}
+\frame{\frametitle{Methods and Techniques in Phonetic Sciences: MaTiPS}
   \begin{itemize}
     \item \url{https://matips.org/}
     \item Title and authors 19 July, anywhere on Earth
