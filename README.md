@@ -4,6 +4,8 @@ Talk at Queen Margaret University, Glasgow University and University of Lancaste
 
 The slides are listed above as slides.pdf or you can follow this [link [pdf]](slides.pdf)
 
+[There will be instructions here for running the demo.]
+
 ## Abstract
 
 One of the major hurdles in phonetics is that we need to segment a lot of data. This is true even with forced alignment and AI tools as they need good training data in order to be reliable. With the limited time any of us can spend on segmentation, it would be helpful to expand the pool of experts. Unfortunately, it takes time to train a good segmenter and the teaching takes considerable effort on the part of the teacher. This is a problem that I’m attempting to address with some new tools.
