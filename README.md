@@ -2,7 +2,9 @@
 
 Talk at Queen Margaret University, Glasgow University and University of Lancaster in June 2025.
 
-The slides are listed above as slides.pdf or you can follow one of these links:
+The slides are listed above as slides.pdf. This was an evolving talk so you can
+get the different versions from these links - should that interest you for some
+reason :D
 
 - Slides at QMU on 2nd June [link [pdf]](slides_qmu.pdf)
 - Current version [link [pdf]](slides.pdf)
