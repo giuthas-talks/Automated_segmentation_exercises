@@ -1,0 +1,254 @@
+\documentclass[12pt,a4,english,finnish,pdflatex%,handout
+]{beamer}
+\definecolor{MyGreen}{RGB}{50, 120, 50}
+\usecolortheme[named=MyGreen]{structure}
+
+\usepackage{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb} 
+\usepackage{animate}
+\usepackage{multimedia}
+
+\usepackage{natbib}
+\bibpunct[: ]{(}{)}{,}{}{}{;}
+
+\usepackage{tikz}
+
+\usepackage{tipa}
+
+\usepackage{hyperref}
+
+\setbeamertemplate{navigation symbols}{}
+
+\graphicspath{{figures/}}
+
+\setlength{\leftmargini}{0pt}
+\setlength{\leftmarginii}{1em}
+
+%% Write out the names of graphics files being included 
+\newwrite\graphics
+\immediate\openout\graphics=\jobname.graphics%
+\let\oincludegraphics\includegraphics% store original \includegraphics
+\renewcommand{\includegraphics}[2][]{% prepend to it (could also use xpatch, etc.)
+  \immediate\write\graphics{#2}
+  \oincludegraphics[#1]{#2}}
+
+\newcommand{\kommentti}[1]{
+  {\bf[#1]}
+}
+
+
+\title{Automated Segmentation Exercises with PATKIT}
+\author{Pertti Palo} 
+\date{2nd June 2025} 
+
+\begin{document}
+
+\frame{\titlepage
+  \centering
+} 
+
+
+\frame{\frametitle{Land acknowledgement}
+
+  The University of Alberta, its buildings, labs and research stations are
+  primarily located on the territory of the Néhiyaw (Cree), Niitsitapi
+  (Blackfoot), Métis, Nakoda (Stoney), Dene, Haudenosaunee (Iroquois) and
+  Anishinaabe (Ojibway/Saulteaux), lands that are now known as part of Treaties
+  6, 7 and 8 and homeland of the Métis. The University of Alberta respects the
+  sovereignty, lands, histories, languages, knowledge systems and cultures of all
+  First Nations, Métis and Inuit nations. 
+  \vfill
+  In addition to our university's written land acknowledgement I'd like to speak
+  of my own relation to the lands where I have been working for almost a year now.
+
+}
+
+
+\frame{\frametitle{Outline}
+  \begin{itemize}
+  \item Land acknowledgement
+  \item This slide
+  \item Introduction: The what and the why
+  \item The Caveats
+  \item Method: The how
+  \item Demo - ish
+  \item Discussion
+  \item Want to have a go yourself?
+  \item MaTiPS ad
+  \item Thanks and references
+  \end{itemize}
+}
+
+
+\frame{\frametitle{Introduction: The what and the why}
+  \begin{itemize}
+  \item Segmentation can be explained, but actually getting good at it requires
+  hands-on practice.
+  \item While Praat \citep{BoersmaWeenink-PraatDoingPhonetics-2010} has an
+  excellent segmentation interface, it does not provide a segmentation exercise
+  interface.
+  \item PATKIT \citep{PaloEtAl-PATKITPhoneticAnalysis-2025} copies Praat's
+  segmentation interface and adds a resettable exercise feature. 
+  \end{itemize}
+}
+
+
+\frame{\frametitle{The Caveats}
+  \begin{itemize}
+    \item Does not work yet.
+    \item Everything might change.
+    \item I want your input for making this good.
+  \end{itemize}
+}
+
+
+\frame{\frametitle{Method: Installing PATKIT}
+\begin{itemize}
+  \item Install uv \url{https://docs.astral.sh/uv/}
+  % \begin{itemize}
+  %   \item Mac/Linux: 
+  %   \begin{verbatim}
+  %     curl -LsSf https://astral.sh/uv/install.sh | sh
+  %   \end{verbatim} 
+  %   \item Windows:
+  %   \begin{verbatim}
+  %     powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+  %   \end{verbatim}
+  % \end{itemize} 
+  \item On the commandline run:\\
+    uv tool install patkit\\
+    patkit
+  \item This should print the commandline help.
+\end{itemize}
+}
+
+
+\frame{\frametitle{Method: Running an example assignment/exercise}
+\begin{itemize}
+  \item Get the example data from\\ 
+  \url{https://github.com/giuthas-talks/Automated_segmentation_exercises/}
+  \item Put it in a couple of folders of your own choosing. 
+  \item Run:\\
+    patkit exercise [folder name]
+  \item This should open the annotator GUI.
+\end{itemize}
+}
+
+
+\frame{\frametitle{Method: Setting up}
+
+\begin{itemize}
+  \item Open a directory with matching TextGrids and audio files in PATKIT as
+  an exercise:\\
+  ~~Exercises $\rightarrow$ Create assignment\ldots
+  \item If setting up for others, go to:\\
+  ~~Exercises $\rightarrow$ Save as exercise \ldots\\
+  to save the audio files and the scrambled TextGrids in a new location. 
+\end{itemize}
+}
+
+
+\frame{\frametitle{Method: Running an exercise}
+\begin{itemize}
+  \item Either do the setup steps or get an exercise dataset from someone.
+  \item If you want to compare your segmentation with the model, you'll
+  need to get the model files too.
+  \item Do the segmentation.
+  \item Check how you are doing by going to:\\
+  ~~Exercises $\rightarrow$ Compare to model
+  \item When wishing to re-run an exercise go to:\\
+  ~~Exercises $\rightarrow$ Scramble TextGrids
+  \item Rinse and repeat.
+\end{itemize}
+}
+
+
+\frame{
+  \centering
+  {
+    \bf \Large 
+    \usebeamercolor[fg]{title}
+    Demo - seeing is believing
+    \vfill
+  }
+}
+
+
+\frame{\frametitle{Discussion}
+\begin{itemize}
+  \item So, do you have thoughts?
+  \item What would make this more useful to you?
+  \item What other features would be good to have?
+\end{itemize}
+}
+
+
+\frame{
+  \centering
+  {
+    \bf \Large 
+    \usebeamercolor[fg]{title}
+    Want to have a go yourself?
+    \vfill
+    --
+    \vfill
+    Keep an eye out for version 0.18 and updates (0.18.x) later this week.
+    \vfill
+  }
+}
+
+
+\frame{
+  \centering
+  {
+    \bf \Large 
+    \usebeamercolor[fg]{title}
+    MaTiPS ad
+    
+    \vfill
+  }
+}
+
+
+\frame{\frametitle{Methods and Techniques in Phonetic Sciences: MaTiPS}
+  \begin{itemize}
+    \item \url{https://matips.org/}
+    \item Title and authors 19 July, anywhere on Earth
+    \item Full one-page abstract 26 July, anywhere on Earth 
+    \item Results by beginning of August.
+    \item Conference 17-19 October, University of Alberta, Edmonton, Alberta, Canada.
+  \end{itemize}
+\vspace{0.5cm}
+\begin{itemize}
+  \item Canadian Acoustics Week happens to be in neighbouring Calgary 15-17 October.
+  \begin{itemize}
+    \item \url{https://jcaa.caa-aca.ca/index.php/jcaa/announcement/view/91}
+    \item There will probably be a bus between the conferences.
+  \end{itemize}
+\end{itemize}
+}
+
+
+\frame{
+  \centering
+  {
+    \bf \Large 
+    \usebeamercolor[fg]{title}
+    Thank you!
+    
+    \vfill
+  }
+}
+
+
+\frame{\frametitle{References}
+  
+\bibliographystyle{apalike}
+\bibliography{main}
+
+}
+
+\end{document}
+
