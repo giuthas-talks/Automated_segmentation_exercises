@@ -11,6 +11,17 @@ reason :D
 
 [There will be instructions here for running the demo once it works.]
 
+During development (before release of PATKIT v0.18) you can get the example exercise
+data from these two locations:
+
+- Make one directory of [wavs and
+  textgrids](https://github.com/giuthas-publications/patkit/tree/exercises/recorded_data/assignment_example)
+- And a second one of [config
+  files](https://github.com/giuthas-publications/patkit/tree/exercises/exercises/minimal)
+- You will need to make sure that in `patkit_data.yaml` the
+  `recorded_data_path` points to the *relative* location of the wavs and
+  textgrids on your computer.
+
 ## Abstract
 
 One of the major hurdles in phonetics is that we need to segment a lot of data.
