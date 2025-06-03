@@ -41,7 +41,7 @@
 
 \title{Automated Segmentation Exercises with PATKIT}
 \author{Pertti Palo} 
-\date{2nd June 2025} 
+\date{3nd June 2025} 
 
 \begin{document}
 
@@ -72,7 +72,7 @@
   \item This slide
   \item Introduction: The what and the why
   \item The Caveats
-  \item Method: The how
+  \item Method
   \item Demo - ish
   \item Discussion
   \item Want to have a go yourself?
@@ -89,7 +89,8 @@
   \item While Praat \citep{BoersmaWeenink-PraatDoingPhonetics-2010} has an
   excellent segmentation interface, it does not provide a segmentation exercise
   interface.
-  \item PATKIT \citep{PaloEtAl-PATKITPhoneticAnalysis-2025} copies Praat's
+  \item The Phonetic Analysis ToolKIT (PATKIT, the program previously known as
+  SATKIT) \citep{PaloEtAl-PATKITPhoneticAnalysis-2025} copies Praat's
   segmentation interface and adds a resettable exercise feature. 
   \end{itemize}
 }
@@ -97,9 +98,23 @@
 
 \frame{\frametitle{The Caveats}
   \begin{itemize}
-    \item Does not work yet.
+    \item Exercises do not work yet.
     \item Everything might change.
     \item I want your input for making this good.
+  \end{itemize}
+}
+
+
+\frame{\frametitle{Method: The workflow}
+  \begin{itemize}
+    \item Segment a bunch of data somewhere - for now probably in Praat.
+    \item Alternatively, get a bunch of segmented data (TextGrids and e.g.
+    wavs) from somewhere.
+    \item Open the data directory in PATKIT as a new assignment.
+    \item PATKIT scrambles the TextGrids.
+    \item Segment away.
+    \item Optional saving of answers to continue later and for things like
+    inter-rater metrics. 
   \end{itemize}
 }
 
@@ -137,30 +152,16 @@
 }
 
 
-\frame{\frametitle{Method: Setting up}
+\frame{\frametitle{Method: Potential command names}
 
 \begin{itemize}
-  \item Open a directory with matching TextGrids and audio files in PATKIT as
-  an exercise:\\
-  ~~Exercises $\rightarrow$ Create assignment\ldots
-  \item If setting up for others, go to:\\
-  ~~Exercises $\rightarrow$ Save as exercise \ldots\\
-  to save the audio files and the scrambled TextGrids in a new location. 
-\end{itemize}
-}
-
-
-\frame{\frametitle{Method: Running an exercise}
-\begin{itemize}
-  \item Either do the setup steps or get an exercise dataset from someone.
-  \item If you want to compare your segmentation with the model, you'll
-  need to get the model files too.
-  \item Do the segmentation.
-  \item Check how you are doing by going to:\\
-  ~~Exercises $\rightarrow$ Compare to model
-  \item When wishing to re-run an exercise go to:\\
-  ~~Exercises $\rightarrow$ Scramble TextGrids
-  \item Rinse and repeat.
+  \item Exercises $\rightarrow$ Create assignment\ldots
+  \item Exercises $\rightarrow$ Save assignment\ldots 
+  \item Exercises $\rightarrow$ New answer 
+  \item Exercises $\rightarrow$ Open answer\ldots 
+  \item Exercises $\rightarrow$ Save answer\ldots 
+  \item Exercises $\rightarrow$ Compare to model
+  \item Exercises $\rightarrow$ Show model
 \end{itemize}
 }
 
@@ -170,7 +171,7 @@
   {
     \bf \Large 
     \usebeamercolor[fg]{title}
-    Demo - seeing is believing
+    Demo
     \vfill
   }
 }
@@ -206,7 +207,6 @@
     \bf \Large 
     \usebeamercolor[fg]{title}
     MaTiPS ad
-    
     \vfill
   }
 }
