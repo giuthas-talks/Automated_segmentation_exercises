@@ -7,6 +7,7 @@ get the different versions from these links - should that interest you for some
 reason :D
 
 - Slides at QMU on 2nd June [link [pdf]](slides_qmu.pdf)
+- Slides at Lancaster on 3rd June [link [pdf]](slides_lancaster.pdf)
 - Current version [link [pdf]](slides.pdf)
 
 [There will be instructions here for running the demo once it works.]
